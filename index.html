@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Client For 0.14</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #36393e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+        .title:hover {
+            text-shadow: 0 0 10px #74ebd5;
+            transform: scale(1.05);
+        }
+
+        .card {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .card-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #fff;
+            color: #36393e;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 0 10px;
+        }
+        .card-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .get-button {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            background-image: linear-gradient(to right, #ff6b6b, #7f81f5);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .get-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.8em;
+            z-index: 1000; /* 确保在页面内容之下 */
+        }
+        .footer span, .footer a {
+            margin: 0 5px;
+            color: inherit;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.2em;
+            }
+            .card {
+                padding: 15px;
+            }
+            .get-button {
+                padding: 10px 30px;
+                font-size: 1em;
+            }
+            .footer {
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Cake Client</h1>
+    </div>
+    <div class="card introduction">
+        <div class="section-title">介绍</div>
+        <div class="card-content">
+            <p>一个Minecraft PE 0.14.3客户端</p>
+        </div>
+    </div>
+    <div class="card features">
+        <div class="section-title">特性</div>
+        <div class="card-content">
+            <p>1. 优化了启动速度</p>
+            <p>2. 优化了内存占用</p>
+            <p>3. 优化了渲染效果</p>
+            <p>4. 优化了游戏体验</p>
+        </div>
+    </div>
+    <div class="card join-us">
+        <div class="section-title">关注我们</div>
+        <div class="card-content">
+            <div class="button-container">
+                <a href="https://space.bilibili.com/1097023537" class="card-button">
+                    <img src="bilibili.png" alt="B站" style="width: 100%; height: auto;">
+                </a>
+                <a href="https://qm.qq.com/q/VdvxWVdGyO" class="card-button">
+                    <img src="qq.png" alt="QQ群" style="width: 100%; height: auto;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.123pan.com/s/4ntkjv-qyPO.html" class="get-button">获取</a>
+    <div class="footer">
+        <a href="https://icp.gov.moe/?keyword=20242201" target="_blank" style="text-decoration:none;" rel="noopener">
+            <img src="icon.png" style="width:16px;height:16px;vertical-align:middle;">
+            <span style="color:#f1b1b1;font-size:12px;vertical-align:middle;">萌ICP备20242201号</span>
+          </a>
+    </div>
+</body>
+</html>
